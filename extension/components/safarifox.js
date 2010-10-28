@@ -13,8 +13,9 @@ SafariFox.prototype = {
       Ci.nsISupports, Ci.nsISupportsWeakReference, Ci.nsIContentPolicy]),
 
   shouldLoad: function(ct, cl, org, ctx, mt, ext) {
-    //Services.console.logStringMessage(cl.spec);
-    return CP.ACCEPT;
+    if (ct != CP.TYPE_DOCUMENT || !/\.safariextz$/.test(cl.spec))
+      return CP.ACCEPT;
+    return CP.REJECT_REQUEST;
   },
 
   shouldProcess: function(ct, cl, org, ctx, mt, ext) CP.ACCEPT,
