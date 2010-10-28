@@ -1,0 +1,7 @@
+component {04ffc7e3-e235-11df-85ca-0800200c9a66} components/safarifox.js
+contract  @safarifox.mozilla.org/safarifox-service;1 {04ffc7e3-e235-11df-85ca-0800200c9a66}
+category  content-policy @safarifox.mozilla.org/safarifox-service;1 @safarifox.mozilla.org/safarifox-service;1
+
+#content    safarifox    content/
+#resource   safarifox    modules/
+#skin       safarifox    classic/1.0 skin/
